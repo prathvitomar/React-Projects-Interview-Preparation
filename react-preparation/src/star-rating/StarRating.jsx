@@ -2,38 +2,41 @@ import React, {useState} from 'react'
 
 function StarRating({ noOfStars = 5 }) {
     const [rating, setRating] = useState(0);
-    const [hover, setHover] = useState(0);
-  
-    function handleClick(getCurrentIndex) {
-      setRating(getCurrentIndex);
+    const [stars, setStars] = useState(0);
+
+    const onHoverFunc = (index)=>{
+        setStars(index);
     }
-  
-    function handleMouseEnter(getCurrentIndex) {
-      setHover(getCurrentIndex);
+
+    const onClickFunc = (index)=>{
+        setRating(index);
     }
-  
-    function handleMouseLeave() {
-      setHover(rating);
+
+    const onHoverExitFunc = ()=>{
+        setStars(rating);
     }
-  
-    return (
-      <div className="star-rating">
-        {[...Array(noOfStars)].map((_, index) => {
-          index += 1;
-  
-          return (
-            <FaStar
-              key={index}
-              className={index <= (hover || rating) ? "active" : "inactive"}
-              onClick={() => handleClick(index)}
-              onMouseMove={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave()}
-              size={40}
-            />
-          );
-        })}
-      </div>
-    );
+
+    return(
+        <>
+        {
+            [...Array(noOfStars)].map((_, index)=>{
+                index += 1;
+                return <div key={index}>
+                <img 
+                width="50px"
+                index={index}
+                onClick={()=> onClickFunc(index)}
+                onMouseMove={()=> onHoverFunc(index)}
+                onMouseLeave={() => onHoverExitFunc()}
+                src={index <= (stars || rating) ? `../public/images/filled-star.png` : `../public/images/empty-star.png`}
+                alt=""
+                />
+            </div>
+            })
+        }
+        </>
+    )
+
 }
 
 export default StarRating

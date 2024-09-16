@@ -4,7 +4,7 @@ import StarRating from './StarRating';
 function MainStarRating() {
     return (
         <>
-        <StarRating noOfStars={10} />
+        <StarRating noOfStars={5} />
         </>
     );
 }
