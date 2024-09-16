@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainAccordion from './accordian-challenge/MainAccordion.jsx'
 import MainRandomColor from './random-color-challenge/MainRandomColor.jsx'
+import MainStarRating from './star-rating/MainStarRating.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path : 'random-color',
         element : <MainRandomColor />
+      },
+      {
+        path : 'star-rating',
+        element : <MainStarRating />
       },
     ]
   }
