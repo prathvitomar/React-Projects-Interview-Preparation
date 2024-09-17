@@ -1,0 +1,11 @@
+.card {
+    display: inline-block;  /* Takes only as much width as content requires */
+    padding: 16px;          /* Internal padding for content */
+    margin: 10px;           /* Optional margin to separate cards */
+    border: 1px solid #ccc; /* Border for card styling */
+    border-radius: 8px;     /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for visual depth */
+    max-width: 300px;       /* Limit card width to avoid stretching too much */
+    word-wrap: break-word;  /* Prevent text overflow */
+  }
