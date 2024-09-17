@@ -9,6 +9,7 @@ import MainStarRating from './star-rating/MainStarRating.jsx'
 import MainImageSlider from './image-slider/MainImageSlider.jsx'
 import MainLoadMore from './load-more-data/MainLoadMore.jsx'
 import MainMenuUI from './menu-ui/MainMenuUI.jsx'
+import MainQRgenerator from './qr-generator/MainQRgenerator.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path : 'menu-ui',
         element : <MainMenuUI />
+      },
+      {
+        path : 'qr-generator',
+        element : <MainQRgenerator />
       },
     ]
   }
