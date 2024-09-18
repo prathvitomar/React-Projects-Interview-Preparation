@@ -10,6 +10,7 @@ import MainImageSlider from './image-slider/MainImageSlider.jsx'
 import MainLoadMore from './load-more-data/MainLoadMore.jsx'
 import MainMenuUI from './menu-ui/MainMenuUI.jsx'
 import MainQRgenerator from './qr-generator/MainQRgenerator.jsx'
+import MainThemeChanger from './theme-changer/MainThemeChanger.jsx'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path : 'qr-generator',
         element : <MainQRgenerator />
+      },
+      {
+        path : 'theme-changer',
+        element : <MainThemeChanger />
       },
     ]
   }
