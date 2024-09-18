@@ -1,5 +1,6 @@
 import React from 'react'
 import useLocalStroage from "./useLocalStorage";
+import './styles.css'
 
 function MainThemeChanger() {
     const [theme, setTheme] = useLocalStroage("theme", "dark");
