@@ -11,6 +11,7 @@ import MainLoadMore from './load-more-data/MainLoadMore.jsx'
 import MainMenuUI from './menu-ui/MainMenuUI.jsx'
 import MainQRgenerator from './qr-generator/MainQRgenerator.jsx'
 import MainThemeChanger from './theme-changer/MainThemeChanger.jsx'
+import MainScrollIndicator from './scroll-indicator/MainScrollIndicator.jsx'
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path : 'theme-changer',
         element : <MainThemeChanger />
+      },
+      {
+        path : 'scroll-indicator',
+        element : <MainScrollIndicator />
       },
     ]
   }
