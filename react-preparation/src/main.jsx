@@ -13,6 +13,7 @@ import MainQRgenerator from './qr-generator/MainQRgenerator.jsx'
 import MainThemeChanger from './theme-changer/MainThemeChanger.jsx'
 import MainScrollIndicator from './scroll-indicator/MainScrollIndicator.jsx'
 import MainCustomTab from './custom-tab/MainCustomTab.jsx'
+import MainModalPopUp from './modal-popup/MainModalPopUp.jsx'
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path : 'custom-tab',
         element : <MainCustomTab />
+      },
+      {
+        path : 'modal-popup',
+        element : <MainModalPopUp />
       },
     ]
   }

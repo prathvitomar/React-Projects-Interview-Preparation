@@ -1,0 +1,21 @@
+.modal-main {
+    height: 300px;
+    border: solid black;
+    border-radius: 10px;
+}
+
+
+.modal-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400
+}
+
+.modal-section {
+    font-family: cursive;
+    font-size: medium;
+}
+
+.button {
+    size: 20px;
+    border-radius: 20px;
+}
