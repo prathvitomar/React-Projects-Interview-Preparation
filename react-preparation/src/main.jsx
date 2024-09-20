@@ -14,6 +14,8 @@ import MainThemeChanger from './theme-changer/MainThemeChanger.jsx'
 import MainScrollIndicator from './scroll-indicator/MainScrollIndicator.jsx'
 import MainCustomTab from './custom-tab/MainCustomTab.jsx'
 import MainModalPopUp from './modal-popup/MainModalPopUp.jsx'
+import MainGithubFinder from './github-profile-finder/MainGithubFinder.jsx'
+import GithubProfile from './github-profile-finder/GithubProfile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -64,6 +66,10 @@ const router = createBrowserRouter([
         path : 'modal-popup',
         element : <MainModalPopUp />
       },
+      {
+        path : 'github-finder',
+        element : <MainGithubFinder />
+      }
     ]
   }
 ])
