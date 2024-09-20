@@ -12,6 +12,7 @@ import MainMenuUI from './menu-ui/MainMenuUI.jsx'
 import MainQRgenerator from './qr-generator/MainQRgenerator.jsx'
 import MainThemeChanger from './theme-changer/MainThemeChanger.jsx'
 import MainScrollIndicator from './scroll-indicator/MainScrollIndicator.jsx'
+import MainCustomTab from './custom-tab/MainCustomTab.jsx'
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path : 'scroll-indicator',
         element : <MainScrollIndicator />
+      },
+      {
+        path : 'custom-tab',
+        element : <MainCustomTab />
       },
     ]
   }

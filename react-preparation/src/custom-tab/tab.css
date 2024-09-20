@@ -1,0 +1,6 @@
+.tab {
+    width: 200px;
+    background-color: grey;
+    border: solid black;
+    cursor: pointer;
+}
