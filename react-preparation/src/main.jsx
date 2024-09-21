@@ -16,6 +16,7 @@ import MainCustomTab from './custom-tab/MainCustomTab.jsx'
 import MainModalPopUp from './modal-popup/MainModalPopUp.jsx'
 import MainGithubFinder from './github-profile-finder/MainGithubFinder.jsx'
 import GithubProfile from './github-profile-finder/GithubProfile.jsx'
+import MainSearchAutoComplete from './search-autocomplete/MainSearchAutoComplete.jsx'
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path : 'github-finder',
         element : <MainGithubFinder />
+      },
+      {
+        path : 'search-autocomplete',
+        element : <MainSearchAutoComplete />
       }
     ]
   }
