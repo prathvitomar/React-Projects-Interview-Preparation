@@ -17,6 +17,7 @@ import MainModalPopUp from './modal-popup/MainModalPopUp.jsx'
 import MainGithubFinder from './github-profile-finder/MainGithubFinder.jsx'
 import GithubProfile from './github-profile-finder/GithubProfile.jsx'
 import MainSearchAutoComplete from './search-autocomplete/MainSearchAutoComplete.jsx'
+import MainTicTacToe from './tic-tac-toe/MainTicTacToe.jsx'
 
 const router = createBrowserRouter([
   {
@@ -74,7 +75,11 @@ const router = createBrowserRouter([
       {
         path : 'search-autocomplete',
         element : <MainSearchAutoComplete />
-      }
+      },
+      {
+        path : 'tic-tae-toe',
+        element : <MainTicTacToe />
+      },
     ]
   }
 ])
