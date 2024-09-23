@@ -18,6 +18,7 @@ import MainGithubFinder from './github-profile-finder/MainGithubFinder.jsx'
 import GithubProfile from './github-profile-finder/GithubProfile.jsx'
 import MainSearchAutoComplete from './search-autocomplete/MainSearchAutoComplete.jsx'
 import MainTicTacToe from './tic-tac-toe/MainTicTacToe.jsx'
+import MainUseFetch from './use-fetch/MainUseFetch.jsx'
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path : 'tic-tae-toe',
         element : <MainTicTacToe />
+      },
+      {
+        path : 'use-fetch',
+        element : <MainUseFetch />
       },
     ]
   }
