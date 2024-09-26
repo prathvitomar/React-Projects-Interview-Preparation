@@ -20,6 +20,7 @@ import MainSearchAutoComplete from './search-autocomplete/MainSearchAutoComplete
 import MainTicTacToe from './tic-tac-toe/MainTicTacToe.jsx'
 import MainUseFetch from './use-fetch/MainUseFetch.jsx'
 import MainFeatureFlag from './feature-flag-implementation/MainFeatureFlag.jsx'
+import MainScrollToBottom from './scroll-to-bottom/MainScrollToBottom.jsx'
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
       {
         path : 'flag-implementation',
         element : <MainFeatureFlag />
+      },
+      {
+        path : 'scroll-to-bottom',
+        element : <MainScrollToBottom />
       },
     ]
   }
