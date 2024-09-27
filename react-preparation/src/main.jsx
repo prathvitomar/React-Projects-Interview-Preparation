@@ -23,6 +23,8 @@ import MainFeatureFlag from './feature-flag-implementation/MainFeatureFlag.jsx'
 import MainScrollToBottom from './scroll-to-bottom/MainScrollToBottom.jsx'
 import MainScrollToParticularSection from './scroll-to-particular-section/MainScrollToParticularSection.jsx'
 import MainWeatherApp from './weather-app/MainWeatherApp.jsx'
+import MainFoodRecipeApp from './food-recipe-app/MainFoodRecipeApp.jsx'
+import CardDetails from './food-recipe-app/CardDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -104,6 +106,14 @@ const router = createBrowserRouter([
       {
         path : 'weather-app',
         element : <MainWeatherApp />
+      },
+      {
+        path : 'food-recipe',
+        element : <MainFoodRecipeApp />
+      },
+      {
+        path : 'food-recipe/:id',
+        element : <CardDetails />
       },
     ]
   }
