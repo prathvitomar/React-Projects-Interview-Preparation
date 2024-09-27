@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import data from './data'
 
 function MainScrollToBottom() {
+    const ref = useRef(null);
     const userData = data;
-
     function scrollToBottom(){
-        window.scrollTo(0, document.body.scrollHeight);
+        ref.current.scrollIntoView({behavior: 'smooth'})
     }
 
     function scrollToTop(){
-        window.scrollTo(document.body.scrollHeight,0);
+        document.body.scrollIntoView({ behavior: 'smooth' });
+
     }
 
   return (
@@ -17,12 +18,13 @@ function MainScrollToBottom() {
     <button onClick={scrollToBottom}>Scroll to bottom</button>
     {
         userData.map((item)=>(
-            <div>
+            <div key={item.id}>
                 <h1>{item.title}</h1>
                 <section>{item.body}</section>
             </div>
         ))
     }
+    <div ref={ref}></div>
     <button onClick={scrollToTop}>Scroll to Top</button>
     </>
   )

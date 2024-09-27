@@ -21,6 +21,7 @@ import MainTicTacToe from './tic-tac-toe/MainTicTacToe.jsx'
 import MainUseFetch from './use-fetch/MainUseFetch.jsx'
 import MainFeatureFlag from './feature-flag-implementation/MainFeatureFlag.jsx'
 import MainScrollToBottom from './scroll-to-bottom/MainScrollToBottom.jsx'
+import MainScrollToParticularSection from './scroll-to-particular-section/MainScrollToParticularSection.jsx'
 
 const router = createBrowserRouter([
   {
@@ -94,6 +95,10 @@ const router = createBrowserRouter([
       {
         path : 'scroll-to-bottom',
         element : <MainScrollToBottom />
+      },
+      {
+        path : 'scroll-to-particular-section',
+        element : <MainScrollToParticularSection />
       },
     ]
   }
