@@ -27,6 +27,8 @@ import MainFoodRecipeApp from "./food-recipe-app/MainFoodRecipeApp.jsx";
 import CardDetails from "./food-recipe-app/CardDetails.jsx";
 import { Provider } from "react-redux";
 import store from "./shopping-cart-app/store.js";
+import MainShoppingCart from "./shopping-cart-app/MainShoppingCart.jsx";
+import Favorites from "./shopping-cart-app/Favorites.jsx";
 
 const router = createBrowserRouter([
   {
@@ -116,6 +118,14 @@ const router = createBrowserRouter([
       {
         path: "food-recipe/:id",
         element: <CardDetails />,
+      },
+      {
+        path: "shopping-cart",
+        element: <MainShoppingCart />,
+      },
+      {
+        path: "shopping-cart/favorites",
+        element: <Favorites />,
       },
     ],
   },
