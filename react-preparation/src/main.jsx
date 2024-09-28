@@ -27,8 +27,10 @@ import MainFoodRecipeApp from "./food-recipe-app/MainFoodRecipeApp.jsx";
 import CardDetails from "./food-recipe-app/CardDetails.jsx";
 import { Provider } from "react-redux";
 import store from "./shopping-cart-app/store.js";
+import expenseStore from "./expense-tracker/store/store.js";
 import MainShoppingCart from "./shopping-cart-app/MainShoppingCart.jsx";
 import Favorites from "./shopping-cart-app/Favorites.jsx";
+import MainExpenseTracker from "./expense-tracker/MainExpenseTracker.jsx";
 
 const router = createBrowserRouter([
   {
@@ -127,12 +129,16 @@ const router = createBrowserRouter([
         path: "shopping-cart/favorites",
         element: <Favorites />,
       },
+      {
+        path: "expense-tracker",
+        element: <MainExpenseTracker />,
+      },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
+  <Provider store={expenseStore}>
     <StrictMode>
       <RouterProvider router={router} />
     </StrictMode>
