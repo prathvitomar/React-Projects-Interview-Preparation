@@ -5,6 +5,7 @@ function Input({
   title = "",
   placeholder = "",
   handleChange,
+  ...props
 }, ref) {
   return (
     <>
@@ -14,7 +15,8 @@ function Input({
       ref={ref}
       placeholder={placeholder} 
       type={type} 
-      onChange={(e) => handleChange(e.target.value)}
+      onChange={handleChange}
+      {...props}
       />
     </div>
     </>
