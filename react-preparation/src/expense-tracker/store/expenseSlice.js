@@ -7,7 +7,7 @@ export const expenseSlice = createSlice({
     initialState,
     reducers : {
         addTransaction : (state,action) =>{
-            state = action.payload
+            state.push(action.payload)
         }
     }
 })

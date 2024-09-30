@@ -4,7 +4,7 @@ import expenseSlice from './expenseSlice'
 
 const expenseStore = configureStore({
     reducer : {
-        expense : expenseSlice
+        expenses : expenseSlice
     }
 })
 

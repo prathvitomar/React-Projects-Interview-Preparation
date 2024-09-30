@@ -29,6 +29,7 @@ function Transaction() {
       return;
     }
     const transactionData = {
+      id: Date.now(),
       description,
       amount: parseFloat(amount),
       type: type,
