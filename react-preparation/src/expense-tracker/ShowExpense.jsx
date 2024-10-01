@@ -1,4 +1,5 @@
 import React from 'react'
+import ExpenseChart from './ExpenseChart'
 
 function ShowExpense({
   balance,
@@ -8,6 +9,7 @@ function ShowExpense({
 
   return (
     <>
+    <div className='show-expense-main'>
       <div>
         <h1>Balance is ${balance}</h1>
         <div>
@@ -19,6 +21,13 @@ function ShowExpense({
           <p>Total Expense</p>
         </div>
       </div>
+      <div>
+        <ExpenseChart
+        income={income}
+        expense={expense}
+        />
+      </div>
+    </div>
     </>
   )
 }

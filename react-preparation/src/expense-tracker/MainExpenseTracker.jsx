@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useMemo } from "react";
-import { useSelector } from 'react-redux'
+import React, { useState, useMemo } from "react";
+import { useSelector } from "react-redux";
 import ShowExpense from "./ShowExpense";
 import Transaction from "./Transaction";
 import ExpenseChart from "./ExpenseChart";
@@ -9,27 +9,11 @@ import "./styles.css";
 
 function MainExpenseTracker() {
   const [showTransaction, setShowTransaction] = useState(false);
-  const allData = useSelector(state => state.expenses);
-  const [expense, setExpense] = useState([]);
-  const [income, setIncome] = useState([]);
+  const expense = useSelector((state) => state.expenses.expense);
+  const income = useSelector((state) => state.expenses.income);
 
-  console.log("All Data:", allData);
-
-  useEffect(() => {
-    if (Array.isArray(allData) && allData.length > 0) {
-      filterIncomeAndExpense();
-    } else {
-      setExpense([]);
-      setIncome([]);
-    }
-  }, [allData]);
-
-  const filterIncomeAndExpense = () => {
-    const filteredExpense = allData.filter((item) => item.type === "expense");
-    const filteredIncome = allData.filter((item) => item.type === "income");
-    setExpense(filteredExpense);
-    setIncome(filteredIncome);
-  };
+  console.log("Expense :", expense);
+  console.log("Income :", income);
 
   const totalIncome = useMemo(() => {
     return income.reduce((sum, item) => sum + item.amount, 0);
@@ -40,7 +24,6 @@ function MainExpenseTracker() {
   }, [expense]);
 
   const balanceLeft = totalIncome - totalExpense;
-
 
   return (
     <>
@@ -58,17 +41,27 @@ function MainExpenseTracker() {
         </div>
         <div>
           <ShowExpense
-            balance = {balanceLeft}
+            balance={balanceLeft}
             income={totalIncome}
             expense={totalExpense}
           />
         </div>
-        <div>
+        <div className="expense-portion">
           <div>
-            <ExpensePage />
+            <label>Income</label>
+            {income.map((item) => (
+              <div key={item.id}>
+                <ExpensePage label={item.description} income={item.amount} />
+              </div>
+            ))}
           </div>
           <div>
-            <IncomePage />
+            <label>Expense</label>
+            {expense.map((item) => (
+              <div key={item.id}>
+                <ExpensePage label={item.description} expense={item.amount} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

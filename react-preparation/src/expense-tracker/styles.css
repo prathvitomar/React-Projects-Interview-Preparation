@@ -2,3 +2,19 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+.show-expense-main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.amount-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-portion{
+    display: flex;
+    justify-content: space-around;
+}
