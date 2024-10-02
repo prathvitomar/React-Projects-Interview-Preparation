@@ -31,6 +31,7 @@ import expenseStore from "./expense-tracker/store/store.js";
 import MainShoppingCart from "./shopping-cart-app/MainShoppingCart.jsx";
 import Favorites from "./shopping-cart-app/Favorites.jsx";
 import MainExpenseTracker from "./expense-tracker/MainExpenseTracker.jsx";
+import Register from "./jwt-authentication/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -132,6 +133,10 @@ const router = createBrowserRouter([
       {
         path: "expense-tracker",
         element: <MainExpenseTracker />,
+      },
+      {
+        path: "login-account",
+        element: <Register />,
       },
     ],
   },
