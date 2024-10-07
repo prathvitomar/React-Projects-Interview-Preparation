@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo, useContext } from "react";
 import "./styles.css";
-import AuthContext from "./contexts/AuthProvider";
+// import AuthContext from "./contexts/AuthProvider";
 import axios from "axios";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;

@@ -32,6 +32,7 @@ import MainShoppingCart from "./shopping-cart-app/MainShoppingCart.jsx";
 import Favorites from "./shopping-cart-app/Favorites.jsx";
 import MainExpenseTracker from "./expense-tracker/MainExpenseTracker.jsx";
 import Register from "./jwt-authentication/Register.jsx";
+import AccordianRevision from "./All-Revision_Projects/accordian-revision/AccordianRevision.jsx";
 
 const router = createBrowserRouter([
   {
@@ -137,6 +138,10 @@ const router = createBrowserRouter([
       {
         path: "login-account",
         element: <Register />,
+      },
+      {
+        path: "revision-accordian",
+        element: <AccordianRevision />,
       },
     ],
   },
