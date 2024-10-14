@@ -35,6 +35,7 @@ import Register from "./jwt-authentication/Register.jsx";
 import AccordianRevision from "./All-Revision_Projects/accordian-revision/AccordianRevision.jsx";
 import RandomColorRevision from "./All-Revision_Projects/random-color-revision/RandomColorRevision.jsx";
 import StarRatingRevision from "./All-Revision_Projects/star-rating-revision/StarRatingRevision.jsx";
+import TabMainRevision from "./All-Revision_Projects/tab-revision/TabMainRevision.jsx";
 
 const router = createBrowserRouter([
   {
@@ -152,6 +153,10 @@ const router = createBrowserRouter([
       {
         path: "revision-star-rating",
         element: <StarRatingRevision />,
+      },
+      {
+        path: "revision-custom-tab",
+        element: <TabMainRevision />,
       },
     ],
   },
