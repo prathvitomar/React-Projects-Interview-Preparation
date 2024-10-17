@@ -26,7 +26,6 @@ import MainWeatherApp from "./weather-app/MainWeatherApp.jsx";
 import MainFoodRecipeApp from "./food-recipe-app/MainFoodRecipeApp.jsx";
 import CardDetails from "./food-recipe-app/CardDetails.jsx";
 import { Provider } from "react-redux";
-import store from "./store/store.js";
 import expenseStore from "./expense-tracker/store/store.js";
 import MainShoppingCart from "./shopping-cart-app/MainShoppingCart.jsx";
 import Favorites from "./shopping-cart-app/Favorites.jsx";
@@ -36,10 +35,10 @@ import AccordianRevision from "./All-Revision_Projects/accordian-revision/Accord
 import RandomColorRevision from "./All-Revision_Projects/random-color-revision/RandomColorRevision.jsx";
 import StarRatingRevision from "./All-Revision_Projects/star-rating-revision/StarRatingRevision.jsx";
 import TabMainRevision from "./All-Revision_Projects/tab-revision/TabMainRevision.jsx";
-import PostLists from "./redux-tutorial/components/PostLists.jsx";
-import AddPost from "./redux-tutorial/components/AddPost.jsx";
+import PostList from "./redux-tutorial/components/PostList.jsx";
 import stores from "./store/store.js";
 import MainReduxForm from "./redux-tutorial/components/MainReduxForm.jsx";
+import AddPostForm from "./redux-tutorial/components/AddPostForm.jsx";
 
 const router = createBrowserRouter([
   {
@@ -168,11 +167,11 @@ const router = createBrowserRouter([
         children: [
           {
             path: "list",
-            element: <PostLists />,
+            element: <PostList />,
           },
           {
             path: "form",
-            element: <AddPost />,
+            element: <AddPostForm />,
           },
         ]
       },
