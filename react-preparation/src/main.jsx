@@ -39,6 +39,10 @@ import PostList from "./redux-tutorial/components/PostList.jsx";
 import stores from "./store/store.js";
 import MainReduxForm from "./redux-tutorial/components/MainReduxForm.jsx";
 import AddPostForm from "./redux-tutorial/components/AddPostForm.jsx";
+import Layout from "./redux-blog/components/Layout.jsx";
+import Post from "./redux-blog/components/Post.jsx";
+import AllPosts from "./redux-blog/components/AllPosts.jsx";
+import AddPost from "./redux-blog/components/AddPost.jsx";
 
 const router = createBrowserRouter([
   {
