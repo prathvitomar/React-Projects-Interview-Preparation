@@ -43,6 +43,9 @@ import Layout from "./redux-blog/components/Layout.jsx";
 import Post from "./redux-blog/components/Post.jsx";
 import AllPosts from "./redux-blog/components/AllPosts.jsx";
 import AddPost from "./redux-blog/components/AddPost.jsx";
+import store from './store/store.js';
+import { fetchPosts } from './redux-blog/features/postsSlice.js';
+import { fetchUsers } from './redux-blog/features/usersSlice.js';
 
 const router = createBrowserRouter([
   {
@@ -170,8 +173,8 @@ const router = createBrowserRouter([
         element: <MainReduxForm />,
         children: [
           {
-            path: "list",
-            element: <PostList />,
+            path: "all-posts",
+            element: <AllPosts />,
           },
           {
             path: "form",
@@ -183,6 +186,9 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
+store.dispatch(fetchPosts());
+store.dispatch(fetchUsers());
 
 createRoot(document.getElementById("root")).render(
   <Provider store={stores}>

@@ -1,12 +1,10 @@
 import React from 'react'
-import PostList from './PostList'
-import AddPostForm from './AddPostForm'
+import AllPosts from '../../redux-blog/components/AllPosts'
 
 function MainReduxForm() {
   return (
     <>
-        <AddPostForm/>
-        <PostList/>
+        <AllPosts/>
     </>
   )
 }
