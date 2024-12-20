@@ -46,6 +46,7 @@ import AddPost from "./redux-blog/components/AddPost.jsx";
 import store from './store/store.js';
 import { fetchPosts } from './redux-blog/features/postsSlice.js';
 import { fetchUsers } from './redux-blog/features/usersSlice.js';
+import MainContext from "./Concept-Practice/context-API/MainContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -167,6 +168,10 @@ const router = createBrowserRouter([
       {
         path: "revision-custom-tab",
         element: <TabMainRevision />,
+      },
+      {
+        path: "context-api",
+        element: <MainContext />,
       },
       {
         path: "redux-main-form",
